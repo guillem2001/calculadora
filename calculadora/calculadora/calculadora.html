@@ -34,14 +34,6 @@
         </style>
 </head>
 <body>
-<ul>
-     <li><a href="../index.html">Inici</a></li>
-     <li><a class="active" href="#">Calculadora</a></li>
-     <li><a onclick="back()">Anar endavant</a></li>
-     <li><a onclick="forward()">Anar endarrere</a></li>
-     <li><a href="../informacio/informacio.html">Informació</a></li>
-</ul>
-<br>
 <form name="calculator" id="calculadora">
     <h3>Calculadora</h3>
     <input type="textfield" id="numero" value="" readonly>
@@ -49,21 +41,21 @@
     <input type="button" value="1" onclick="afegirDigit(1)">
     <input type="button" value="2" onclick="afegirDigit(2)">
     <input type="button" value="3" onclick="afegirDigit(3)">
-    <input type="button" value="+">
+    <input type="button" value="+" onclick="afegirOperador(1)">
     <br>
     <input type="button" value="4" onclick="afegirDigit(4)">
     <input type="button" value="5" onclick="afegirDigit(5)">
     <input type="button" value="6" onclick="afegirDigit(6)">
-    <input type="button" value="-">
+    <input type="button" value="-" onclick="afegirOperador(2)">
     <br>
     <input type="button" value="7" onclick="afegirDigit(7)">
     <input type="button" value="8" onclick="afegirDigit(8)">
     <input type="button" value="9" onclick="afegirDigit(9)">
-    <input type="button" value="*">
+    <input type="button" value="*" onclick="afegirOperador(3)">
     <br>
     <input type="button" value="0" onclick="afegirDigit(0)">
-    <input type="reset" value="C">
-    <input type="button" value="/">
+    <input type="reset" value="C" onclick="c()">
+    <input type="button" value="/" onclick="afegirOperador(4)">
     <input type="button" value="=">
     <br>
     <input type="button" value="CE">
