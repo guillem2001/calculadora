@@ -47,11 +47,11 @@ li a:hover {
   <input type="submit" onclick="guardar()" value="Canviar coordenades">
 </form>
 <script>
-  function guardar() {
+  function guardar()  {
       var x = document.getElementById("x");
       var y = document.getElementById("y");
       var x1 = parseInt(x.value) + 500;
-      var y1 = parseInt(y.value) + 600; 
+      var y1 = parseInt(y.value) + 600;
     if(x1 < window.innerWidth && y1 < window.innerHeight ){
       if(!sessionStorage.getItem("x")){
        var x = document.getElementById("x");
