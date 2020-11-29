@@ -53,3 +53,8 @@ function punt(){
       alert("No pot tenir més de un punt decimal");
     }
 }
+
+function esborrarDigit(){
+    let mostrar = document.getElementById("numero");
+    mostrar.value = mostrar.value.substring(0, mostrar.value.length - 1);
+}
