@@ -38,3 +38,8 @@ function ce(){
     let mostrar = document.getElementById("numero");
     mostrar.value = "";
 }
+
+function c(){
+    let mostrar = document.getElementById("numero");
+    mostrar.value = "";
+}
