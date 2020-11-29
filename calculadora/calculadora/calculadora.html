@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/calculadora.js" defer></script>
+    <script src="../menu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         ul {
           list-style-type: none;
@@ -32,26 +34,34 @@
         </style>
 </head>
 <body>
+<ul>
+     <li><a href="../index.html">Inici</a></li>
+     <li><a class="active" href="#">Calculadora</a></li>
+     <li><a onclick="back()">Anar endavant</a></li>
+     <li><a onclick="forward()">Anar endarrere</a></li>
+     <li><a href="../informacio/informacio.html">Informació</a></li>
+</ul>
+<br>
 <form name="calculator" id="calculadora">
     <h3>Calculadora</h3>
     <input type="textfield" id="numero" value="" readonly>
     <br>
-    <input type="button" value="1">
-    <input type="button" value="2">
-    <input type="button" value="3">
+    <input type="button" value="1" onclick="afegirDigit(1)">
+    <input type="button" value="2" onclick="afegirDigit(2)">
+    <input type="button" value="3" onclick="afegirDigit(3)">
     <input type="button" value="+">
     <br>
-    <input type="button" value="4">
-    <input type="button" value="5">
-    <input type="button" value="6">
+    <input type="button" value="4" onclick="afegirDigit(4)">
+    <input type="button" value="5" onclick="afegirDigit(5)">
+    <input type="button" value="6" onclick="afegirDigit(6)">
     <input type="button" value="-">
     <br>
-    <input type="button" value="7">
-    <input type="button" value="8">
-    <input type="button" value="9">
+    <input type="button" value="7" onclick="afegirDigit(7)">
+    <input type="button" value="8" onclick="afegirDigit(8)">
+    <input type="button" value="9" onclick="afegirDigit(9)">
     <input type="button" value="*">
     <br>
-    <input type="button" value="0">
+    <input type="button" value="0" onclick="afegirDigit(0)">
     <input type="reset" value="C">
     <input type="button" value="/">
     <input type="button" value="=">
@@ -61,3 +71,4 @@
 </form>
 </body>
 </html>
+<script>
