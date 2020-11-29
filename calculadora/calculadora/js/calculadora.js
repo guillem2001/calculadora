@@ -43,3 +43,13 @@ function c(){
     let mostrar = document.getElementById("numero");
     mostrar.value = "";
 }
+
+function punt(){
+    let mostrar = document.getElementById("numero");
+    let value = mostrar.value;
+    if(!value.includes(".")){
+      mostrar.value += ".";
+    }else{
+      alert("No pot tenir més de un punt decimal");
+    }
+}
