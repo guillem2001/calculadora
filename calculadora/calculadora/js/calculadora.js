@@ -33,3 +33,8 @@ function afegirOperador(operador){
   }
   mostrar.value="";
 }
+
+function ce(){
+    let mostrar = document.getElementById("numero");
+    mostrar.value = "";
+}
