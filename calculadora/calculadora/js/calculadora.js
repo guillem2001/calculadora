@@ -58,3 +58,41 @@ function esborrarDigit(){
     let mostrar = document.getElementById("numero");
     mostrar.value = mostrar.value.substring(0, mostrar.value.length - 1);
 }
+
+function resultat(){
+    let mostrar = document.getElementById("numero");
+    if (mostrar.value==="") {
+      alert("No pots acabar l'operació amb un operador");
+    }else if(operadors.length === 1){
+      mostrar.value = mostrar.value;
+    }else{
+      numeros.push(mostrar.value);
+      let total = 0;
+      let resultat = parseFloat(numeros[0]);
+      for(let i = 1; i < numeros.length; i++){
+         if(operadors[i]!="" && operadors[i]==="+"){
+           total = resultat + parseFloat(numeros[i]);
+         }else if(operadors[i]!="" && operadors[i]==="-"){
+           total = resultat - parseFloat(numeros[i]);
+         }else if(operadors[i]!="" && operadors[i]==="*"){
+           total = resultat * parseFloat(numeros[i]);
+         }else if(operadors[i]!="" && operadors[i]==="/"){
+           total = resultat / parseFloat(numeros[i]);
+         }
+        resultat = total;
+      }
+        let entero = Math.trunc(resultat);
+        var e = parseFloat(entero - total);
+        if(e != 0){
+          mostrar.value = resultat.toFixed(3);
+          numeros = [];
+          operadors = [];
+          operadors.push("");
+        }else{
+          mostrar.value = Math.trunc(resultat);
+          numeros = [];
+          operadors = [];
+          operadors.push("");
+        }
+    }
+}
