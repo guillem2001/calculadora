@@ -53,21 +53,11 @@ li a:hover {
       var x1 = parseInt(x.value) + 500;
       var y1 = parseInt(y.value) + 600;
     if(x1 < window.innerWidth && y1 < window.innerHeight ){
-      if(!sessionStorage.getItem("x")){
        var x = document.getElementById("x");
        var y = document.getElementById("y");
-      console.log(x.value);
-      sessionStorage.setItem("x", x.value);
-      sessionStorage.setItem("y", y.value);
-      }else{
-       sessionStorage.removeItem("x");
-       sessionStorage.removeItem("y");
-        var x = document.getElementById("x");
-        var y = document.getElementById("y");
-        console.log(x.value);
-        sessionStorage.setItem("x", x.value);
-        sessionStorage.setItem("y", y.value);
-      }
+       console.log(x.value);
+       sessionStorage.setItem("x", x.value);
+       sessionStorage.setItem("y", y.value);   
   }else{
     alert("No pots introduir aquestes coordenades");
   }
